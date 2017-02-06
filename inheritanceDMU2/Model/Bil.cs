@@ -78,7 +78,7 @@ namespace inheritanceDMU2.Model
             return BilPrisExAfgift + RegistreringAfgift();
         }
 
-        public double HalvÅrligEjeafgift()
+        public virtual double HalvÅrligEjeafgift()
         {
             return 1000;
         }
