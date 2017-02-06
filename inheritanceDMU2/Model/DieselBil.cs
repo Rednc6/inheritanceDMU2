@@ -24,17 +24,43 @@ namespace inheritanceDMU2.Model
         // metoder
         public override double HalvÅrligEjeafgift()
         {
-            if (PartikelFilter == true)
+            if (KmPrLiter <15)
             {
-                return base.HalvÅrligEjeafgift();
+                if (PartikelFilter == true)
+                {
+                    return 2000;
+                }
+                else
+                {
+                    return 2500;
+                }
 
             }
-            else
+            if (KmPrLiter >= 15 && KmPrLiter <= 25)
             {
-                return base.HalvÅrligEjeafgift() + 500;
-
+                if (PartikelFilter == true)
+                {
+                    return 1000;
+                }
+                else
+                {
+                    return 1500;
+                }
+            }
+            if (KmPrLiter >= 25)
+            {
+                if (PartikelFilter == true)
+                {
+                    return 350;
+                }
+                else
+                {
+                    return 850;
+                }
             }
 
+            return 0;
+            
 
         }
 

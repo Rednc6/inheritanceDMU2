@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\BenzinBil.cs" />
     <Compile Include="Model\Bil.cs" />
     <Compile Include="Model\DieselBil.cs" />
     <Compile Include="Program.cs" />

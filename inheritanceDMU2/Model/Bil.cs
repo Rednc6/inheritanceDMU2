@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace inheritanceDMU2.Model
 {
-    public class Bil
+    public abstract class Bil
     {
 
         // props
@@ -78,10 +78,8 @@ namespace inheritanceDMU2.Model
             return BilPrisExAfgift + RegistreringAfgift();
         }
 
-        public virtual double HalvÅrligEjeafgift()
-        {
-            return 1000;
-        }
+        public abstract double HalvÅrligEjeafgift();
+        
 
         
     }
