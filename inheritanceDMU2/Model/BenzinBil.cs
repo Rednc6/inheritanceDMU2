@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace inheritanceDMU2.Model
 {
-    class BenzinBil : Bil
+    sealed class BenzinBil : Bil
     {
-        public BenzinBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift) : base(mærke, købsår, kmPrLiter, bilPrisExAfgift)
+        // prop
+        public int tank { get; set; }
+
+        public double KmPrLiter { get; set; }
+
+
+        // ctor
+        public BenzinBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, int tank) : base(mærke, købsår, bilPrisExAfgift)
         {
+            this.KmPrLiter = kmPrLiter;
+            this.tank = tank;
         }
 
+        // metod
         public override double HalvÅrligEjeafgift()
         {
             if (KmPrLiter <20)
@@ -28,6 +38,17 @@ namespace inheritanceDMU2.Model
             }
 
             return 0;
+        }
+
+        public override double RækkeVidde()
+        {
+            return tank * KmPrLiter;
+            
+        }
+
+        public override string ToString()
+        {
+            return $"Mærke = {Mærke} \nKøbs år = {KøbsÅr} \nPris = {TotalPris()} \nRække vidde = {RækkeVidde()} \nEjer afgift {HalvÅrligEjeafgift()}";
         }
     }
 }

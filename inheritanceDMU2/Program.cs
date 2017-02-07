@@ -13,20 +13,42 @@ namespace inheritanceDMU2
         static void Main(string[] args)
         {
 
+            List<IBil> BilListe = new List<IBil>();
+            BilListe.Add(new ElBil("ElMonster", 2015, 50000, 50, 10));
+            BilListe.Add(new BenzinBil("BB", 2015, 10, 50000, 50));
+            BilListe.Add(new DieselBil("DB - filter", 2015, 10, 50000, 50, false));
+            BilListe.Add(new DieselBil("DB + filter", 2015, 10, 50000, 50, true));
 
-        List<DieselBil> DieselBilListe = new List<DieselBil>();
 
-            DieselBilListe.Add(new DieselBil("Fiat", 1943, 2, 500, false));
-            DieselBilListe.Add(new DieselBil("Porche", 1943, 2, 500, false));
-            DieselBilListe.Add(new DieselBil("Toyota", 1943, 2, 500));
-            DieselBilListe.Add(new DieselBil("Madeup", 1943, 2, 500));
-            DieselBilListe.Add(new DieselBil("Tiredofmaking up", 1943, 2, 500));
-
-            foreach (var item in DieselBilListe)
+            foreach (var carItem in BilListe)
             {
-                Console.WriteLine($"{item.Mærke} + {item.KøbsÅr} + {item.KmPrLiter} + {item.BilPrisExAfgift} + {item.PartikelFilter}");
+                if (carItem is ElBil)
+                {
+                    ElBil eB = carItem as ElBil;
+
+                    Console.WriteLine("ElBil");
+                    Console.WriteLine(eB + "\n");
+                    
+                }
+                if (carItem is DieselBil)
+                {
+                    DieselBil dB = carItem as DieselBil;
+
+                    Console.WriteLine("DieselBil");
+                    Console.WriteLine(dB + "\n");
+
+                }
+                if (carItem is BenzinBil)
+                {
+                    BenzinBil bB = carItem as BenzinBil;
+
+                    Console.WriteLine("BenzinBil");
+                    Console.WriteLine(bB + "\n");
+
+                }
 
             }
+
 
             Console.ReadKey();
 

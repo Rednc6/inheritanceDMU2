@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace inheritanceDMU2.Model
 {
-    public abstract class Bil
+    public abstract class Bil : IBil
     {
 
         // props
@@ -14,18 +14,15 @@ namespace inheritanceDMU2.Model
 
         public int KøbsÅr { get; private set; }
 
-        public double KmPrLiter { get; set; }
-
         public string Mærke { get; set; }
 
         public string RegistringNr { get; set; }
 
         // ctor
-        public Bil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift)
+        public Bil(string mærke, int købsår, double bilPrisExAfgift)
         {
             this.Mærke = mærke;
             this.KøbsÅr = købsår;
-            this.KmPrLiter = kmPrLiter;
             this.BilPrisExAfgift = bilPrisExAfgift;
         }
 
@@ -79,8 +76,10 @@ namespace inheritanceDMU2.Model
         }
 
         public abstract double HalvÅrligEjeafgift();
-        
 
-        
+        public abstract double RækkeVidde();
+
+     
+
     }
 }

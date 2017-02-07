@@ -11,12 +11,19 @@ namespace inheritanceDMU2.Model
         // prop
         public bool PartikelFilter { get; set; }
 
+        public double tank { get; set; }
+
+        public double KmPrLiter { get; set; }
+
         // ctor
-        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, bool partikelFilter) : base(mærke, købsår, kmPrLiter, bilPrisExAfgift)
+        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, double tank, bool partikelFilter) : base(mærke, købsår, bilPrisExAfgift)
         {
+            this.tank = tank;
+            this.KmPrLiter = kmPrLiter;
+            this.PartikelFilter = partikelFilter;
         }
 
-        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift) : this(mærke, købsår, kmPrLiter, bilPrisExAfgift, true)
+        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, double tank) : this(mærke, købsår, kmPrLiter, bilPrisExAfgift, tank, true)
         {
         }
 
@@ -60,10 +67,18 @@ namespace inheritanceDMU2.Model
             }
 
             return 0;
-            
+       }
 
+        public override double RækkeVidde()
+        {
+            return tank * KmPrLiter;
+            
         }
 
+        public override string ToString()
+        {
+            return $"Mærke = {Mærke} \nKøbs år = {KøbsÅr} \nPris = {TotalPris()} \nRække vidde = {RækkeVidde()} \nFilter = {PartikelFilter} \nEjer afgift = {HalvÅrligEjeafgift()}";
+        }
 
     }
 }
