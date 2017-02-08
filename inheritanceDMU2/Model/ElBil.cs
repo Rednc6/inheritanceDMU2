@@ -12,15 +12,19 @@ namespace inheritanceDMU2.Model
         //props
 
         public int BatteriKapacitet { get; set; }
-
         public int KmPrKW { get; set; }
 
+
+
+        // ctor
         public ElBil(string mærke, int købsår, double bilPrisExAfgift, int BatteriKapacitet, int KmPrKW) : base(mærke, købsår, bilPrisExAfgift)
         {
             this.BatteriKapacitet = BatteriKapacitet;
             this.KmPrKW = KmPrKW;
         }
 
+
+        // method
         public override double HalvÅrligEjeafgift()
         {
             return 0;

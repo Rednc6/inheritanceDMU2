@@ -10,20 +10,20 @@ namespace inheritanceDMU2.Model
     {
         // prop
         public bool PartikelFilter { get; set; }
-
         public double tank { get; set; }
-
         public double KmPrLiter { get; set; }
 
         // ctor
-        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, double tank, bool partikelFilter) : base(mærke, købsår, bilPrisExAfgift)
+        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, double tank, bool partikelFilter) 
+            : base(mærke, købsår, bilPrisExAfgift)
         {
             this.tank = tank;
             this.KmPrLiter = kmPrLiter;
             this.PartikelFilter = partikelFilter;
         }
 
-        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, double tank) : this(mærke, købsår, kmPrLiter, bilPrisExAfgift, tank, true)
+        public DieselBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, double tank) 
+            : this(mærke, købsår, kmPrLiter, bilPrisExAfgift, tank, true)
         {
         }
 

@@ -4,15 +4,17 @@
     {
 
         // prop
-        int BatteriKapacitet { get; set; }
-        int KmPrKW { get; set; }
+        //int BatteriKapacitet { get; set; }
+        //int KmPrKW { get; set; }
 
 
         // metod
         int LadeTid();
-        double HalvÅrligEjeafgift();
-        double RegistreringAfgift();
-        double RækkeVidde();
-        string ToString();
+
+
+        //double HalvÅrligEjeafgift();
+        //double RegistreringAfgift();
+        //double RækkeVidde();
+        //string ToString();
     }
 }

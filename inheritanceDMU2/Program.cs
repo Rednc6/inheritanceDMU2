@@ -46,6 +46,15 @@ namespace inheritanceDMU2
                     Console.WriteLine(bB + "\n");
 
                 }
+                if (carItem is IElBil)
+                {
+                    IElBil ieB = carItem as IElBil;
+
+                    Console.WriteLine("IelBil interface");
+                    Console.WriteLine(ieB.LadeTid());
+
+
+                }
 
             }
 

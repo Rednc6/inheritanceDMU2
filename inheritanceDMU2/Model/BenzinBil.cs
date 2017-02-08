@@ -15,7 +15,8 @@ namespace inheritanceDMU2.Model
 
 
         // ctor
-        public BenzinBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, int tank) : base(mærke, købsår, bilPrisExAfgift)
+        public BenzinBil(string mærke, int købsår, double kmPrLiter, double bilPrisExAfgift, int tank) 
+            : base(mærke, købsår, bilPrisExAfgift)
         {
             this.KmPrLiter = kmPrLiter;
             this.tank = tank;

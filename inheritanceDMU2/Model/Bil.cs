@@ -11,11 +11,8 @@ namespace inheritanceDMU2.Model
 
         // props
         public double BilPrisExAfgift { get; private set; }
-
         public int KøbsÅr { get; private set; }
-
         public string Mærke { get; set; }
-
         public string RegistringNr { get; set; }
 
         // ctor
@@ -30,23 +27,19 @@ namespace inheritanceDMU2.Model
         // metods
         public virtual double RegistreringAfgift()
         {
-
             if (KøbsÅr <= 2014)
             {
-
                 if (BilPrisExAfgift <= 80500)
                 {
                     return BilPrisExAfgift * 1.05;
                 }
                 if (BilPrisExAfgift >= 80500)
-                {
-                    
+                {                    
                     double sum1 = 80500 * 1.05;
                     double sum2 = (BilPrisExAfgift - 80500) * 1.80;
 
                     return sum1 + sum2;
                 }
-
             }
 
             if (KøbsÅr >= 2015)
@@ -61,11 +54,8 @@ namespace inheritanceDMU2.Model
                     double sum2 = (BilPrisExAfgift - 81700) * 1.80;
 
                     return sum1 + sum2;
-
                 }
-
-            }
-            
+            }            
                 return 0;
                         
         }
@@ -75,11 +65,10 @@ namespace inheritanceDMU2.Model
             return BilPrisExAfgift + RegistreringAfgift();
         }
 
+
+        // abstract method
         public abstract double HalvÅrligEjeafgift();
-
-        public abstract double RækkeVidde();
-
-     
+        public abstract double RækkeVidde();    
 
     }
 }
