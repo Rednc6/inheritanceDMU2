@@ -10,7 +10,7 @@ namespace inheritanceDMU2.Model
     {
         // prop
         public bool PartikelFilter { get; set; }
-        public double tank { get; set; }
+        public double tank { get; priv set; }
         public double KmPrLiter { get; set; }
 
         // ctor
