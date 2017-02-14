@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace inheritanceDMU2.Model
 {
-    class ElBil : Bil, IElBil
+    public class ElBil : Bil, IElBil
     {
 
         //props
