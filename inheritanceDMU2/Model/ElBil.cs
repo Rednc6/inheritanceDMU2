@@ -48,7 +48,7 @@ namespace inheritanceDMU2.Model
 
         public override string ToString()
         {
-            return $"Mærke = {Mærke} \nKøbs år = {KøbsÅr} \nPris = {TotalPris()} \nRække vidde = {RækkeVidde()} \nEjer afgift {HalvÅrligEjeafgift()} \n Lade tid = {LadeTid()}";
+            return $"Mærke = {Mærke} \nKøbs år = {KøbsÅr} \nPris = {TotalPris()} \nRække vidde = {RækkeVidde()} \nEjer afgift {HalvÅrligEjeafgift()} \n Lade tid = {LadeTid()} \n Regafgift = {RegistreringAfgift()}";
         }
         
     }

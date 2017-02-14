@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using inheritanceDMU2.Commen;
 
 namespace inheritanceDMU2.Model
 {
-    sealed class BenzinBil : Bil
+    public class BenzinBil : Bil
     {
         // prop
         public int tank { get; set; }
@@ -24,7 +25,11 @@ namespace inheritanceDMU2.Model
         // metod
         public override double HalvÅrligEjeafgift()
         {
-            if (KmPrLiter <20)
+            if (KmPrLiter < 5)
+            {
+                throw new HalvÅrligEjerAfgiftException();
+            }
+            if (KmPrLiter < 20)
             {
                 return 1200;
             }

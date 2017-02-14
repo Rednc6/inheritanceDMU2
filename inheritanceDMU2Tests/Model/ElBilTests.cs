@@ -23,5 +23,18 @@ namespace inheritanceDMU2.Model.Tests
             // assert
             Assert.AreEqual(0, afgift);
         }
+
+        [TestMethod()]
+        public void RækkeViddeTest()
+        {
+            // arrange
+            ElBil obj2 = new ElBil("testobj", 2015, 80500, 50, 10);
+
+            // act
+            double rækkeviddde = obj2.RækkeVidde();
+
+            // assert
+            Assert.AreEqual(500, rækkeviddde);
+        }
     }
 }

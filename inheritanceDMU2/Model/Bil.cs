@@ -27,8 +27,14 @@ namespace inheritanceDMU2.Model
         // metods
         public virtual double RegistreringAfgift()
         {
+
             if (KøbsÅr <= 2014)
             {
+
+                if (BilPrisExAfgift <= 0)
+                {
+                    throw new ArgumentException("prisen må ikke være <= 0");
+                }
                 if (BilPrisExAfgift <= 80500)
                 {
                     return BilPrisExAfgift * 1.05;
@@ -44,6 +50,10 @@ namespace inheritanceDMU2.Model
 
             if (KøbsÅr >= 2015)
             {
+                if (BilPrisExAfgift <= 0)
+                {
+                    throw new ArgumentException("prisen må ikke være <= 0");
+                }
                 if (BilPrisExAfgift <= 81700)
                 {
                     return BilPrisExAfgift * 1.05;

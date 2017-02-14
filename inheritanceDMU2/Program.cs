@@ -14,7 +14,7 @@ namespace inheritanceDMU2
         {
 
             List<IBil> BilListe = new List<IBil>();
-            BilListe.Add(new ElBil("ElMonster", 2015, 50000, 50, 10));
+            BilListe.Add(new ElBil("ElMonster", 2015, 80500, 50, 10));
             BilListe.Add(new BenzinBil("BB", 2015, 10, 50000, 50));
             BilListe.Add(new DieselBil("DB - filter", 2015, 10, 50000, 50, false));
             BilListe.Add(new DieselBil("DB + filter", 2015, 10, 50000, 50, true));
