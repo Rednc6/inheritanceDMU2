@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace inheritanceDMU2.Model
 {
-    class DieselBil : Bil
+    public class DieselBil : Bil
     {
         // prop
         public bool PartikelFilter { get; set; }
