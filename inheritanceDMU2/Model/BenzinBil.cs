@@ -10,7 +10,6 @@ namespace inheritanceDMU2.Model
     {
         // prop
         public int tank { get; set; }
-
         public double KmPrLiter { get; set; }
 
 
